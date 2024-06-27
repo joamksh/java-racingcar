@@ -9,25 +9,43 @@ public class MainController {
 
     public static void main(String[] args) {
 
-        String name;
-        int num;
         Scanner sc = new Scanner(System.in);
-        Car car1 = new Car();
-
-        System.out.println("input car's name");
-        name = sc.next();
-        car1.setName(name);
+        int carNum;
+        int num;
+        System.out.println("input Car's num");
+        carNum=sc.nextInt();
 
         System.out.println("input num");
         num = sc.nextInt();
-        
-        System.out.println("name : "+car1.getName());
 
-        int randomNum = randomResult();
-        if (randomNum >= 4)
-            car1.addResult("-");
-        System.out.println("random number: " + randomNum);
-        System.out.println("result" + car1.getResult());
+        List<Car> cars = new ArrayList<>();
+
+        for (int i = 0; i < carNum; i++) {
+            System.out.println("input car's name for car" + (i + 1));
+            String name = sc.next();
+            Car car = new Car();
+            car.setName(name);
+            cars.add(car);
+        }
+
+        for (Car car : cars) {
+            System.out.println("name : " + car.getName());
+
+            for (int i = 0; i < num; i++) {
+                int randomNum = randomResult();
+                if (randomNum >= 4) {
+                    car.addResult("-");
+                }
+                System.out.println(i + " random number: " + randomNum);
+                System.out.println("result: " + car.getResult());
+            }
+        }
+
+        System.out.println("Comparing results:");
+        for (int i = 0; i < cars.size(); i++) {
+            System.out.println("Car " + (i + 1) + " (" + cars.get(i).getName() + ") result: " + cars.get(i).getResult());
+        }
+
 
     }
 
