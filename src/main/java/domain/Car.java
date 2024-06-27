@@ -3,7 +3,7 @@ package domain;
 public class Car {
 
     String name;
-    String result;
+    String result="";
 
     public Car () {
 
@@ -23,6 +23,11 @@ public class Car {
     public void setResult(String result) {
         this.result = result;
     }
+
+    public void addResult(String additionalResult) {
+        this.result += additionalResult;
+    }
+
 
 
 
