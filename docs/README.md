@@ -37,7 +37,7 @@
 
 [X] CarTest 요구사항 test
 
-[ ] RacingGame 클래스
+[X] RacingGame 클래스
 여러 대의 자동차를 관리, 라운드 수 동안 경기 진행
 
 요구사항
