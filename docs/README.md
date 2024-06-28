@@ -45,7 +45,7 @@
 각 라운드마다 모든 자동차를 전진시킵니다.
 자동차 리스트와 라운드 수를 반환합니다.
 
-[ ] RacingGame 요구사항 test
+[X] RacingGame 요구사항 test
 
 [ ]Main 클래스 
 
