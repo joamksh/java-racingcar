@@ -15,7 +15,11 @@ public class RacingGameController {
         }
     }
 
-    public List<String> getResults() {
+    public void playRound() {
+        racingGame.playRound();
+    }
+
+        public List<String> getResults() {
         return racingGame.getCars().stream()
                 .map(car -> car.getName() + " : " + car.getPositionAsString())
                 .collect(Collectors.toList());
